@@ -7,25 +7,39 @@ import {
   Grid,
   Typography,
   IconButton,
+  CardMedia,
 } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 
 import { Favorite } from "@material-ui/icons"
 
+const useStyles = makeStyles({
+  media: {
+    height: 200,
+  },
+})
+
 const FoodMenu = () => {
+  const classes = useStyles()
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={4}>
         <Card>
           <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="/pics/pizza.jpg"
+              title="Pizza"
+            />
             <CardContent>
               <Typography variant="h5" component="h2">
-                Some Title 1
+                Pizza
               </Typography>
               <Typography>Some description 1</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button onClick={() => alert("You like item #1")} color="primary">
+            <Button onClick={() => alert("You like Pizza")} color="primary">
               Like
             </Button>
           </CardActions>
@@ -34,15 +48,20 @@ const FoodMenu = () => {
       <Grid item xs={12} sm={6} md={4}>
         <Card>
           <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="/pics/hamburguer.jpg"
+              title="Hamburguer"
+            />
             <CardContent>
               <Typography variant="h5" component="h2">
-                Some Title 2
+                Hamburguer
               </Typography>
               <Typography>Some description 2</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button onClick={() => alert("You like item #2")} color="primary">
+            <Button onClick={() => alert("You like Hamburguer")} color="primary">
               Like
             </Button>
           </CardActions>
@@ -51,16 +70,21 @@ const FoodMenu = () => {
       <Grid item xs={12} sm={6} md={4}>
         <Card>
           <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="/pics/fries.jpg"
+              title="French Fries"
+            />
             <CardContent>
               <Typography variant="h5" component="h2">
-                Some Title 3
+                French Fries
               </Typography>
               <Typography>Some description 3</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <IconButton
-              onClick={() => alert("You like item #3")}
+              onClick={() => alert("You like French Fries")}
               color="default"
             >
               <Favorite />
