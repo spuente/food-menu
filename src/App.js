@@ -1,7 +1,13 @@
+import FoodMenu from "./components/FoodMenu"
+import { Container } from "@material-ui/core"
+
 function App() {
   return (
-    <h1>Hello World</h1>
-  );
+    <Container>
+      <h1>FOOD MENU</h1>
+      <FoodMenu />
+    </Container>
+  )
 }
 
-export default App;
+export default App
