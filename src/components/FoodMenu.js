@@ -35,7 +35,7 @@ const FoodMenu = () => {
               <Typography variant="h5" component="h2">
                 Pizza
               </Typography>
-              <Typography>Some description 1</Typography>
+              <Typography>Pizza description</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
@@ -57,7 +57,7 @@ const FoodMenu = () => {
               <Typography variant="h5" component="h2">
                 Hamburguer
               </Typography>
-              <Typography>Some description 2</Typography>
+              <Typography>Hamburguer description</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
@@ -79,7 +79,7 @@ const FoodMenu = () => {
               <Typography variant="h5" component="h2">
                 French Fries
               </Typography>
-              <Typography>Some description 3</Typography>
+              <Typography>French Fries description</Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
