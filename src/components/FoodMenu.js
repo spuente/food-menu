@@ -4,14 +4,14 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  Grid,
-  Typography,
-  IconButton,
   CardMedia,
+  Grid,
+  IconButton,
+  Typography,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-
 import { Favorite } from "@material-ui/icons"
+import FoodCard from "./FoodCard"
 
 const useStyles = makeStyles({
   media: {
@@ -24,26 +24,7 @@ const FoodMenu = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={4}>
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/pics/pizza.jpg"
-              title="Pizza"
-            />
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                Pizza
-              </Typography>
-              <Typography>Pizza description</Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button onClick={() => alert("You like Pizza")} color="primary">
-              Like
-            </Button>
-          </CardActions>
-        </Card>
+        <FoodCard />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
         <Card>
@@ -61,7 +42,10 @@ const FoodMenu = () => {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button onClick={() => alert("You like Hamburguer")} color="primary">
+            <Button
+              onClick={() => alert("You like Hamburguer")}
+              color="primary"
+            >
               Like
             </Button>
           </CardActions>
