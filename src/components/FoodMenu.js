@@ -5,12 +5,12 @@ import foodList from "../data/foodList"
 const FoodMenu = () => {
   return (
     <Grid container spacing={3}>
-      {foodList.map((food) => (
-        <Grid item key={food.title} xs={12} sm={6} md={4}>
+      {foodList.map(({ title, description, imageUrl }) => (
+        <Grid item key={title} xs={12} sm={6} md={4}>
           <FoodCard
-            title={food.title}
-            description={food.description}
-            imageUrl={food.imageUrl}
+            title={title}
+            description={description}
+            imageUrl={imageUrl}
           />
         </Grid>
       ))}
