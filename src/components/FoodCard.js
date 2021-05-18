@@ -15,25 +15,21 @@ const useStyles = makeStyles({
   },
 })
 
-const FoodCard = () => {
+const FoodCard = ({ imageUrl, title, description }) => {
   const classes = useStyles()
   return (
     <Card>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/pics/pizza.jpg"
-          title="Pizza"
-        />
+        <CardMedia className={classes.media} image={imageUrl} title={title} />
         <CardContent>
           <Typography variant="h5" component="h2">
-            Pizza
+            {title}
           </Typography>
-          <Typography>Pizza description</Typography>
+          <Typography>{description}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => alert("You like Pizza")} color="primary">
+        <Button onClick={() => alert(`You like ${title}`)} color="primary">
           Like
         </Button>
       </CardActions>

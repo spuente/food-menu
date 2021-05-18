@@ -24,7 +24,11 @@ const FoodMenu = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={4}>
-        <FoodCard />
+        <FoodCard
+          title="Pizza"
+          description="Pizza description"
+          imageUrl="/pics/pizza.jpg"
+        />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
         <Card>
