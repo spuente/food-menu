@@ -5,9 +5,11 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Snackbar,
   Typography,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
+import { useState } from "react"
 
 const useStyles = makeStyles({
   media: {
@@ -17,6 +19,15 @@ const useStyles = makeStyles({
 
 const FoodCard = ({ imageUrl, title, description }) => {
   const classes = useStyles()
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+
   return (
     <Card>
       <CardActionArea>
@@ -29,9 +40,15 @@ const FoodCard = ({ imageUrl, title, description }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => alert(`You like ${title}`)} color="primary">
+        <Button onClick={handleClick} color="primary">
           Like
         </Button>
+        <Snackbar
+          open={open}
+          onClose={handleClose}
+          autoHideDuration={3000}
+          message={`You like ${title}`}
+        />
       </CardActions>
     </Card>
   )
