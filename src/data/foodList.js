@@ -12,6 +12,12 @@ const foodList = [
     price: 4
   },
   {
+    title: "Steak",
+    description: "Steak description",
+    imageUrl: "/pics/steak.jpg",
+    price: 13
+  },
+  {
     title: "French Fries",
     description: "French Fries description",
     imageUrl: "/pics/fries.jpg",
