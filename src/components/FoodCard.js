@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 })
 
-const FoodCard = ({ imageUrl, title, description }) => {
+const FoodCard = ({ imageUrl, title, description, price }) => {
   const classes = useStyles()
   const [open, setOpen] = useState(false)
 
@@ -42,7 +42,7 @@ const FoodCard = ({ imageUrl, title, description }) => {
             </Box>
             <Box flexShrink={0} p={1}>
               <Typography variant="h5" component="h2">
-                $10
+                ${price}
               </Typography>
             </Box>
           </Box>
