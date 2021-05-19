@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActionArea,
@@ -33,10 +34,21 @@ const FoodCard = ({ imageUrl, title, description }) => {
       <CardActionArea>
         <CardMedia className={classes.media} image={imageUrl} title={title} />
         <CardContent>
-          <Typography variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography>{description}</Typography>
+          <Box display="flex">
+            <Box width="100%" p={1}>
+              <Typography variant="h5" component="h2">
+                {title}
+              </Typography>
+            </Box>
+            <Box flexShrink={0} p={1}>
+              <Typography variant="h5" component="h2">
+                $10
+              </Typography>
+            </Box>
+          </Box>
+          <Box display="flex" p={1}>
+            <Typography>{description}</Typography>
+          </Box>
         </CardContent>
       </CardActionArea>
       <CardActions>
