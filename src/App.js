@@ -5,7 +5,7 @@ function App() {
   return (
     <Container>
       <h1>FOOD MENU</h1>
-      <FoodMenu />
+      <FoodMenu maxPrice={4} />
     </Container>
   )
 }
