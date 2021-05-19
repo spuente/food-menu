@@ -18,7 +18,7 @@ const MaxPriceSlider = ({ marks, setMaxPrice, defaultPrice, min, max }) => {
             marks={marks}
             min={min}
             max={max}
-            onChangeCommitted={handleOnChange}
+            onChange={handleOnChange}
           />
         </Grid>
       </Grid>
