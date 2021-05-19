@@ -1,13 +1,18 @@
+import { useState } from "react"
 import FoodMenu from "./components/FoodMenu"
 import { Box, Container, Grid, Slider, Typography } from "@material-ui/core"
 
 function App() {
+  const [maxPrice, setMaxPrice] = useState(0)
   const marks = [
     { value: 1, label: "$1" },
     { value: 5, label: "$5" },
     { value: 10, label: "$10" },
     { value: 15, label: "$15" },
   ]
+  const handleOnChange = (event, value) => {
+    setMaxPrice(value)
+  }
   return (
     <Container>
       <h1>FOOD MENU</h1>
@@ -23,11 +28,12 @@ function App() {
               marks={marks}
               min={1}
               max={15}
+              onChangeCommitted={handleOnChange}
             />
           </Grid>
         </Grid>
       </Box>
-      <FoodMenu maxPrice={4} />
+      <FoodMenu maxPrice={maxPrice} />
     </Container>
   )
 }
